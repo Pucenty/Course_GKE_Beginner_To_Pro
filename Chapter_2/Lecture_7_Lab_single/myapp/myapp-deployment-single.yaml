@@ -5,7 +5,7 @@ metadata:
   labels:
     app: myapp
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: myapp
@@ -16,10 +16,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: gcr.io/tim-acloud-guru/myapp:blue
+        image: europe-central2-docker.pkg.dev/my-project-417912/my-docker-registry/myapp-with-template
         ports:
         - containerPort: 8888
-        resources:
-          requests:
-            cpu: 200m
 
